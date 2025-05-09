@@ -1,13 +1,15 @@
 import express from "express";
 
+import { PORT } from "./config/env.js";
+
 const app = express();
 
 app.get("/", (req, res) => {
     res.send("Welcome to SubDub API")
 })
 
-app.listen(4000, () => {
-    console.log("Server is running on http://localhost:4000")
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`)
 })
 
 export default app
